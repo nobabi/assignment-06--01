@@ -30,9 +30,7 @@
   </head>
   <body>
     <header>
-      <nav
-        class="w-11/12 mx-auto py-3 flex justify-between items-center border border-red-600"
-      >
+      <nav class="w-11/12 mx-auto py-3 flex justify-between items-center">
         <!-- Logo Section -->
         <div class="logo w-[100px] flex justify-center items-center gap-2 p-2">
           <img src="./design/logo.webp" alt="Logo" class="w-full h-auto" />
@@ -74,9 +72,7 @@
         <div
           class="hero-content flex items-center justify-center min-h-screen text-neutral-content text-center"
         >
-          <div
-            class="mx-auto text-center border border-red-400 h-auto sm:h-[610px] p-5"
-          >
+          <div class="mx-auto text-center h-auto sm:h-[610px] p-5">
             <!-- Section Title -->
             <div>
               <h1 class="text-lg sm:text-xl text-black font-semibold">
@@ -110,7 +106,7 @@
             <!-- Image -->
             <div class="flex items-center justify-center">
               <img
-                class="h-[250px] sm:h-[300px] lg:h-[380px] border border-orange-500"
+                class="h-[250px] sm:h-[300px] lg:h-[380px]"
                 src="./design/pet.webp"
                 alt="Pet Image"
               />
@@ -136,7 +132,7 @@
           </div>
         </div>
 
-        <div class="w-11/12 mx-auto lg:max-w-screen-lg border border-red-400">
+        <div class="w-11/12 mx-auto lg:max-w-screen-lg">
           <div
             class="flex flex-wrap justify-center items-center mx-auto space-x-4 space-y-2"
           >
@@ -202,11 +198,11 @@
       </section>
       <section class="bg-white w-11/12 mx-auto">
         <div
-          class="w-11/12 mx-auto lg:max-w-screen-lg border border-red-400 h-auto flex flex-col lg:flex-row"
+          class="w-11/12 mx-auto lg:max-w-screen-lg h-auto flex flex-col lg:flex-row"
         >
           <!-- Card Section -->
           <div
-            class="w-full lg:w-4/5 grid grid-cols-1 lg:grid-cols-3 gap-4 border border-rose-500 p-4"
+            class="w-full lg:w-4/5 grid grid-cols-1 lg:grid-cols-3 gap-4 p-4"
           >
             <div class="card bg-base-100 shadow-xl">
               <figure>
@@ -269,46 +265,49 @@
       </section>
     </main>
     <footer class="footer bg-[#121212] text-base-content p-10 text-white">
-      <aside>
-        <div class="flex justify-center gap-2">
-          <div><img src="design/logo.webp" /></div>
-          <div class="font-bold">Paddey</div>
-        </div>
+      <div class="flex flex-col lg:flex-row justify-between items-start">
+        <aside class="flex flex-col mb-6 lg:mb-0">
+          <div class="flex justify-center gap-2">
+            <div><img src="design/logo.webp" alt="Logo" /></div>
+            <div class="font-bold">Paddey</div>
+          </div>
 
-        <p>
-          Location: av. Washington 165, NY CA 54003 <br />
-          Phone: +31 85 964 47 25 <br />
-          Email: info@yourdomain.com <br />
-          Openings hours: 9.00 AM - 5.00 PM
-          <br />
-          Providing reliable tech since 1992
-        </p>
-      </aside>
-      <nav>
-        <h6 class="footer-title text-white">Useful Links</h6>
-        <a class="link link-hover">Home</a>
-        <a class="link link-hover">About</a>
-        <a class="link link-hover">Animals</a>
-        <a class="link link-hover">Foundation</a>
-        <a class="link link-hover">Contact</a>
-      </nav>
+          <p>
+            Location: av. Washington 165, NY CA 54003 <br />
+            Phone: +31 85 964 47 25 <br />
+            Email: info@yourdomain.com <br />
+            Openings hours: 9.00 AM - 5.00 PM <br />
+            Providing reliable tech since 1992
+          </p>
+        </aside>
 
-      <nav>
-        <form class="text-white">
-          <h6 class="footer-title">Newsletter</h6>
-          <fieldset class="form-control w-80">
-            <div class="join">
-              <input
-                type="text"
-                placeholder="Enter Your Email"
-                class="input input-bordered join-item"
-              />
-            </div>
-            <button class="btn bg-[#0e7a82] w-[220px] mt-4">Subscribe</button>
-          </fieldset>
-        </form>
-      </nav>
+        <nav class="mb-6 lg:mb-0">
+          <h6 class="footer-title text-white">Useful Links</h6>
+          <a class="link link-hover">Home</a>
+          <a class="link link-hover">About</a>
+          <a class="link link-hover">Animals</a>
+          <a class="link link-hover">Foundation</a>
+          <a class="link link-hover">Contact</a>
+        </nav>
+
+        <nav>
+          <form class="text-white">
+            <h6 class="footer-title">Newsletter</h6>
+            <fieldset class="form-control w-full max-w-xs">
+              <div class="join">
+                <input
+                  type="text"
+                  placeholder="Enter Your Email"
+                  class="input input-bordered join-item w-full"
+                />
+              </div>
+              <button class="btn bg-[#0e7a82] w-full mt-4">Subscribe</button>
+            </fieldset>
+          </form>
+        </nav>
+      </div>
     </footer>
+
     <script src="./js/app.js"></script>
   </body>
 </html>
