@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome icons -->
+    <script
+      src="https://kit.fontawesome.com/ad7c647c34.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#797DFC",
+            },
+          },
+        },
+      };
+    </script>
+
+    <title>Assignment-6</title>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="w-11/12 mx-auto py-3 flex justify-between items-center border border-red-600"
+      >
+        <!-- Logo Section -->
+        <div class="logo w-[100px] flex justify-center items-center gap-2 p-2">
+          <img src="./design/logo.webp" alt="Logo" class="w-full h-auto" />
+          <div class="font-bold text-black">Peddy</div>
+        </div>
+
+        <!-- Navigation Links (Hidden on small screens) -->
+        <div class="hidden md:flex items-center justify-around gap-5">
+          <div>Home</div>
+          <div>Shop</div>
+          <div>Contact</div>
+        </div>
+
+        <!-- User Icon -->
+        <div class="hidden md:block sort border rounded-full p-1">
+          <img src="design/user.png" alt="User" class="w-[40px] h-[40px]" />
+        </div>
+
+        <!-- Hamburger Menu for Mobile -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-black focus:outline-none">☰</button>
+        </div>
+      </nav>
+
+      <!-- Mobile Dropdown Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden flex flex-col justify-center items-center w-11/12 bg-white md:hidden"
+      >
+        <div>Home</div>
+        <div>Shop</div>
+        <div>Contact</div>
+        <div class="sort border rounded-full p-1">
+          <img src="design/user.png" alt="User" class="w-[40px] h-[40px]" />
+        </div>
+      </div>
+
+      <div class="hero w-11/12 mx-auto">
+        <div
+          class="hero-content flex items-center justify-center min-h-screen text-neutral-content text-center"
+        >
+          <div
+            class="mx-auto text-center border border-red-400 h-auto sm:h-[610px] p-5"
+          >
+            <!-- Section Title -->
+            <div>
+              <h1 class="text-lg sm:text-xl text-black font-semibold">
+                How we work
+              </h1>
+            </div>
+
+            <!-- Main Heading and Description -->
+            <div class="mx-auto lg:max-w-screen-lg">
+              <h1
+                class="text-2xl sm:text-3xl lg:text-3xl font-bold leading-snug sm:leading-tight lg:leading-none text-black"
+              >
+                Your Path to Adoption Starts Here
+                <br class="hidden sm:block" />
+                Start Here
+              </h1>
+              <p class="w-full sm:w-3/4 lg:w-3/4 text-neutral-500 my-5 mx-auto">
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a.
+              </p>
+            </div>
+
+            <!-- Button -->
+            <div class="flex items-center justify-center mb-4">
+              <button class="btn btn-outline bg-[#0e7a82] text-white">
+                View Details
+              </button>
+            </div>
+
+            <!-- Image -->
+            <div class="flex items-center justify-center">
+              <img
+                class="h-[250px] sm:h-[300px] lg:h-[380px] border border-orange-500"
+                src="./design/pet.webp"
+                alt="Pet Image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="bg-white">
+        <div class="w-11/12 mx-auto lg:max-w-screen-lg">
+          <div class="">
+            <h3 class="text-3xl font-bold text-center p-2">
+              Adopt Your Best Friend
+            </h3>
+            <p class="text-center">
+              It is a long established fact that a reader will be distracted by
+              the readable content of <br />
+              a page when looking at its layout. The point of using Lorem Ipsum
+              is that it has a.
+            </p>
+          </div>
+        </div>
+
+        <div class="w-11/12 mx-auto lg:max-w-screen-lg border border-red-400">
+          <div
+            class="flex flex-wrap justify-center items-center mx-auto space-x-4 space-y-2"
+          >
+            <div>
+              <button class="btn flex items-center">
+                <img
+                  class="h-[25px] w-[25px] mr-1"
+                  src="./design/dog.png"
+                  alt="Dog Icon"
+                />
+                Dogs
+              </button>
+            </div>
+
+            <div>
+              <button
+                class="btn border rounded-full w-36 flex items-center justify-center"
+              >
+                <img
+                  class="h-[25px] w-[25px] mr-1"
+                  src="./design/cat.png"
+                  alt="Cat Icon"
+                />
+                Cats
+              </button>
+            </div>
+
+            <div>
+              <button class="btn flex items-center">
+                <img
+                  class="h-[25px] w-[25px] mr-1"
+                  src="./design/rabbit.png"
+                  alt="Rabbit Icon"
+                />
+                Rabbits
+              </button>
+            </div>
+
+            <div>
+              <button class="btn flex items-center">
+                <img
+                  class="h-[25px] w-[25px] mr-1"
+                  src="./design/birds.png"
+                  alt="Bird Icon"
+                />
+                Birds
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-white">
+        <div class="w-11/12 mx-auto lg:max-w-screen-lg flex justify-between">
+          <div>Best Deal For you</div>
+          <div>
+            <button class="btn btn-outline bg-[#0e7a82] text-white">
+              Sort by Price
+            </button>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div
+          class="w-11/12 mx-auto lg:max-w-screen-lg border border-red-400 h-auto flex flex-col lg:flex-row"
+        >
+          <!-- Card Section -->
+          <div
+            class="w-full lg:w-4/5 grid grid-cols-1 lg:grid-cols-3 gap-4 border border-rose-500 p-4"
+          >
+            <div class="card bg-base-100 shadow-xl">
+              <figure>
+                <img src="#" alt="Shoes" />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">
+                  Shoes!
+                  <div class="badge badge-secondary">NEW</div>
+                </h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                  <div class="badge badge-outline">Fashion</div>
+                  <div class="badge badge-outline">Products</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card bg-base-100 shadow-xl">
+              <figure>
+                <img src="#" alt="Shoes" />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">
+                  Shoes!
+                  <div class="badge badge-secondary">NEW</div>
+                </h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                  <div class="badge badge-outline">Fashion</div>
+                  <div class="badge badge-outline">Products</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card bg-base-100 shadow-xl">
+              <figure>
+                <img src="#" alt="Shoes" />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">
+                  Shoes!
+                  <div class="badge badge-secondary">NEW</div>
+                </h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                  <div class="badge badge-outline">Fashion</div>
+                  <div class="badge badge-outline">Products</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image Section -->
+          <div class="w-full lg:w-1/5 grid grid-cols-2 gap-2 p-4">
+            <img class="w-full h-auto" src="design/birds.png" alt="" />
+            <img class="w-full h-auto" src="design/birds.png" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer bg-[#121212] text-base-content p-10 text-white">
+      <aside>
+        <div class="flex justify-center gap-2">
+          <div><img src="design/logo.webp" /></div>
+          <div class="font-bold">Paddey</div>
+        </div>
+
+        <p>
+          Location: av. Washington 165, NY CA 54003 <br />
+          Phone: +31 85 964 47 25 <br />
+          Email: info@yourdomain.com <br />
+          Openings hours: 9.00 AM - 5.00 PM
+          <br />
+          Providing reliable tech since 1992
+        </p>
+      </aside>
+      <nav>
+        <h6 class="footer-title text-white">Useful Links</h6>
+        <a class="link link-hover">Home</a>
+        <a class="link link-hover">About</a>
+        <a class="link link-hover">Animals</a>
+        <a class="link link-hover">Foundation</a>
+        <a class="link link-hover">Contact</a>
+      </nav>
+
+      <nav>
+        <form class="text-white">
+          <h6 class="footer-title">Newsletter</h6>
+          <fieldset class="form-control w-80">
+            <div class="join">
+              <input
+                type="text"
+                placeholder="Enter Your Email"
+                class="input input-bordered join-item"
+              />
+            </div>
+            <button class="btn bg-[#0e7a82] w-[220px] mt-4">Subscribe</button>
+          </fieldset>
+        </form>
+      </nav>
+    </footer>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
