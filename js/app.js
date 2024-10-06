@@ -128,10 +128,32 @@ const DisplayDetails = (petData) => {
   const detailsContainer = document.getElementById("modal-content");
 
   detailsContainer.innerHTML = `
-  <img src= ${petData.image}/>
-  <p>${petData.pet_name}</p>
+  <div class="card ">
+              <figure>
+                <img src="${
+                  petData.image
+                }" alt="Shoes" class="mb-5 rounded-lg" />
+              </figure>
+              <div class="card-body gap-2 p-1 line-height-2   ">
+                <h2 class="card-title font-semibold ">
+                  ${petData.pet_name}
+                  
+                </h2>
+                <p class="text-sm whitespace-normal">Breed:${
+                  petData.breed || "Not Specified"
+                }</p>
+                 <p>Birth:${petData.date_of_birth || "Unknown"}</p>
+                 <p>Gender:${petData.gender || "Unknown"}</p>
+                 <p>Price:${petData.price || "Not Available"}</p>
+                 </div>
+
+             
+               
+              </div>
+            </div>
   
   `;
+
   // first way
   // document.getElementById("showModalData").click();
   // second way
@@ -178,7 +200,6 @@ const loadCategories = () => {
 
 // Display categories
 const displayCategories = (categories) => {
-  console.log("shrek");
   document.getElementById("spinner").style.display = "none"; // Hide spinner when categories are displayed
   const categoriesContainer = document.getElementById("categories");
 

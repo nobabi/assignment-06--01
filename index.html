@@ -1,164 +1,150 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- fontawesome icons -->
-    <script
-      src="https://kit.fontawesome.com/ad7c647c34.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* Spinner styles */
-      #spinner {
-        /* display: none; */
-        width: 40px;
-        height: 40px;
-        border: 4px solid rgba(0, 0, 0, 0.1);
-        border-top: 4px solid #000;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-        margin: 20px auto;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- fontawesome icons -->
+  <script src="https://kit.fontawesome.com/ad7c647c34.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Spinner styles */
+    #spinner {
+      /* display: none; */
+      width: 40px;
+      height: 40px;
+      border: 4px solid rgba(0, 0, 0, 0.1);
+      border-top: 4px solid #000;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 20px auto;
+    }
+
+    /* Spinner animation */
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
       }
 
-      /* Spinner animation */
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-     
+      100% {
+        transform: rotate(360deg);
       }
-      </style>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#797DFC",
-            },
+
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#797DFC",
           },
         },
-      };
-    </script>
+      },
+    };
+  </script>
 
-    <title>Assignment-6</title>
-  </head>
-  <body>
-    <header>
-      <nav class="w-11/12 mx-auto py-3 flex justify-between items-center">
-        <!-- Logo Section -->
-        <div class="logo w-[100px] flex justify-center items-center gap-2 p-2">
-          <img src="./design/logo.webp" alt="Logo" class="w-full h-auto" />
-          <div class="font-bold text-black">Peddy</div>
-        </div>
+  <title>Assignment-6</title>
+</head>
 
-        <!-- Navigation Links (Hidden on small screens) -->
-        <div class="hidden md:flex items-center justify-around gap-5">
-          <div>Home</div>
-          <div>Shop</div>
-          <div>Contact</div>
-        </div>
+<body>
+  <header>
+    <nav class="w-11/12 mx-auto py-3 flex justify-between items-center">
+      <!-- Logo Section -->
+      <div class="logo w-[100px] flex justify-center items-center gap-2 p-2">
+        <img src="./design/logo.webp" alt="Logo" class="w-full h-auto" />
+        <div class="font-bold text-black">Peddy</div>
+      </div>
 
-        <!-- User Icon -->
-        <div class="hidden md:block sort border rounded-full p-1">
-          <img src="design/user.png" alt="User" class="w-[40px] h-[40px]" />
-        </div>
-
-        <!-- Hamburger Menu for Mobile -->
-        <div class="md:hidden">
-          <button id="menu-btn" class="text-black focus:outline-none">☰</button>
-        </div>
-      </nav>
-
-      <!-- Mobile Dropdown Menu -->
-      <div
-        id="mobile-menu"
-        class="hidden flex flex-col justify-center items-center w-11/12 bg-white md:hidden"
-      >
+      <!-- Navigation Links (Hidden on small screens) -->
+      <div class="hidden md:flex items-center justify-around gap-5">
         <div>Home</div>
         <div>Shop</div>
         <div>Contact</div>
-        <div class="sort border rounded-full p-1">
-          <img src="design/user.png" alt="User" class="w-[40px] h-[40px]" />
-        </div>
       </div>
 
-      <div class="hero w-11/12 mx-auto">
-        <div
-          class="hero-content flex items-center justify-center min-h-screen text-neutral-content text-center"
-        >
-          <div class="mx-auto text-center h-auto sm:h-[610px] p-5">
-            <!-- Section Title -->
-            <div>
-              <h1 class="text-lg sm:text-xl text-black font-semibold">
-                How we work
-              </h1>
-            </div>
+      <!-- User Icon -->
+      <div class="hidden md:block sort border rounded-full p-1">
+        <img src="design/user.png" alt="User" class="w-[40px] h-[40px]" />
+      </div>
 
-            <!-- Main Heading and Description -->
-            <div class="mx-auto lg:max-w-screen-lg">
-              <h1
-                class="text-2xl sm:text-3xl lg:text-3xl font-bold leading-snug sm:leading-tight lg:leading-none text-black"
-              >
-                Your Path to Adoption Starts Here
-                <br class="hidden sm:block" />
-                Start Here
-              </h1>
-              <p class="w-full sm:w-3/4 lg:w-3/4 text-neutral-500 my-5 mx-auto">
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum is that it has a.
-              </p>
-            </div>
+      <!-- Hamburger Menu for Mobile -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-black focus:outline-none">☰</button>
+      </div>
+    </nav>
 
-            <!-- Button -->
-            <div class="flex items-center justify-center mb-4">
-              <button class="btn btn-outline bg-[#0e7a82] text-white">
-                View Details
-              </button>
-            </div>
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden flex flex-col justify-center items-center w-11/12 bg-white md:hidden">
+      <div>Home</div>
+      <div>Shop</div>
+      <div>Contact</div>
+      <div class="sort border rounded-full p-1">
+        <img src="design/user.png" alt="User" class="w-[40px] h-[40px]" />
+      </div>
+    </div>
 
-            <!-- Image -->
-            <div class="flex items-center justify-center">
-              <img
-                class="h-[250px] sm:h-[300px] lg:h-[380px]"
-                src="./design/pet.webp"
-                alt="Pet Image"
-              />
-            </div>
+    <div class="hero w-11/12 mx-auto">
+      <div class="hero-content flex items-center justify-center min-h-screen text-neutral-content text-center">
+        <div class="mx-auto text-center h-auto sm:h-[610px] p-5">
+          <!-- Section Title -->
+          <div>
+            <h1 class="text-lg sm:text-xl text-black font-semibold">
+              How we work
+            </h1>
           </div>
-        </div>
-      </div>
-    </header>
 
-    <main>
-      <section class="bg-white w-11/12 mx-auto">
-        <div class="w-11/12 mx-auto lg:max-w-screen-lg">
-          <div class="">
-            <h3 class="text-3xl font-bold text-center p-2">
-              Adopt Your Best Friend
-            </h3>
-            <p class="text-center">
-              It is a long established fact that a reader will be distracted by
-              the readable content of <br />
-              a page when looking at its layout. The point of using Lorem Ipsum
-              is that it has a.
+          <!-- Main Heading and Description -->
+          <div class="mx-auto lg:max-w-screen-lg">
+            <h1
+              class="text-2xl sm:text-3xl lg:text-3xl font-bold leading-snug sm:leading-tight lg:leading-none text-black">
+              Your Path to Adoption Starts Here
+              <br class="hidden sm:block" />
+              Start Here
+            </h1>
+            <p class="w-full sm:w-3/4 lg:w-3/4 text-neutral-500 my-5 mx-auto">
+              It is a long established fact that a reader will be distracted
+              by the readable content of a page when looking at its layout.
+              The point of using Lorem Ipsum is that it has a.
             </p>
           </div>
-        </div>
 
-        <nav id="categories" class="flex justify-center gap-5 py-3"></nav>
-        <div id="spinner">Loading...</div>
-          <!-- <div
+          <!-- Button -->
+          <div class="flex items-center justify-center mb-4">
+            <button class="btn btn-outline bg-[#0e7a82] text-white">
+              View Details
+            </button>
+          </div>
+
+          <!-- Image -->
+          <div class="flex items-center justify-center">
+            <img class="h-[250px] sm:h-[300px] lg:h-[380px]" src="./design/pet.webp" alt="Pet Image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="bg-white w-11/12 mx-auto">
+      <div class="w-11/12 mx-auto lg:max-w-screen-lg">
+        <div class="">
+          <h3 class="text-3xl font-bold text-center p-2">
+            Adopt Your Best Friend
+          </h3>
+          <p class="text-center">
+            It is a long established fact that a reader will be distracted by
+            the readable content of <br />
+            a page when looking at its layout. The point of using Lorem Ipsum
+            is that it has a.
+          </p>
+        </div>
+      </div>
+
+      <nav id="categories" class="flex justify-center gap-5 py-3"></nav>
+      <div id="spinner">Loading...</div>
+      <!-- <div
             class="flex flex-wrap justify-center items-center mx-auto space-x-4 space-y-2"
           >
             <div>
@@ -207,124 +193,113 @@
               </button>
             </div>
           </div> -->
-        </div>
-      </section>
-
-      <section class="bg-white w-11/12 mx-auto">
-        <div
-          class="w-11/12 mx-auto lg:max-w-screen-lg flex flex-col lg:flex-row justify-between items-center p-4"
-        >
-          <div class="text-lg font-semibold">Best Deal For You</div>
-          <div class="mt-2 lg:mt-0">
-            <button class="btn btn-outline bg-[#0e7a82] text-white" id="btnsortBy">
-              Sort by Price
-            </button>
-          </div>
-        </div>
-      </section>
-      <section class="bg-white w-11/12 mx-auto">
-        <div
-          class="w-11/12 mx-auto lg:max-w-screen-lg h-auto flex flex-col lg:flex-row"
-        >
-          <!-- Card Section -->
-          <div
-            id="leftCardContainer"
-            class="w-full lg:w-4/5 grid grid-cols-1 lg:grid-cols-3 gap-4 p-4"
-          ></div>
-          <!-- card section end -->
-          <!-- Image Section -->
-          <div class="w-full lg:w-1/5">
-            <div id="rightSideDiv" class="grid grid-cols-2 gap-2 p-4"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Open the modal using ID.showModal() method -->
-      <button
-        id="CountDrownModalData"
-        class="btn hidden"
-        onclick="CountDrownModal.showModal()"
-      >
-        open modal
-      </button>
-      <dialog id="CountDrownModal" class="modal modal-bottom sm:modal-middle">
-        <div class="modal-box">
-          <div id="modal-contentCount"></div>
-
-          <div class="modal-action">
-            <form method="dialog" class="text-center">
-              <h1>hello</h1>
-              <h1>Congrates</h1>
-            </form>
-          </div>
-        </div>
-      </dialog>
-
-      <!-- Open the modal using ID.showModal() method -->
-      <button
-        id="showModalData"
-        class="btn hidden"
-        onclick="customModal.showModal()"
-      >
-        open modal
-      </button>
-      <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
-        <div class="modal-box">
-          <div id="modal-content"></div>
-
-          <div class="modal-action">
-            <form method="dialog">
-              <!-- if there is a button in form, it will close the modal -->
-              <button class="btn">Close</button>
-            </form>
-          </div>
-        </div>
-      </dialog>
-    </main>
-    <footer class="footer bg-[#121212] text-base-content p-10 text-white">
-      <div class="flex flex-col lg:flex-row justify-between items-start">
-        <aside class="flex flex-col mb-6 lg:mb-0">
-          <div class="flex justify-center gap-2">
-            <div><img src="design/logo.webp" alt="Logo" /></div>
-            <div class="font-bold">Paddey</div>
-          </div>
-
-          <p>
-            Location: av. Washington 165, NY CA 54003 <br />
-            Phone: +31 85 964 47 25 <br />
-            Email: info@yourdomain.com <br />
-            Openings hours: 9.00 AM - 5.00 PM <br />
-            Providing reliable tech since 1992
-          </p>
-        </aside>
-
-        <nav class="mb-6 lg:mb-0 flex-col">
-          <h6 class="footer-title text-white">Useful Links</h6>
-          <a class="link link-hover">Home</a>
-          <a class="link link-hover">About</a>
-          <a class="link link-hover">Animals</a>
-          <a class="link link-hover">Foundation</a>
-          <a class="link link-hover">Contact</a>
-        </nav>
-
-        <nav>
-          <form class="text-white text-right">
-            <h6 class="footer-title">Newsletter</h6>
-            <fieldset class="form-control w-full max-w-xs">
-              <div class="join">
-                <input
-                  type="text"
-                  placeholder="Enter Your Email"
-                  class="input input-bordered join-item w-full"
-                />
-              </div>
-              <button class="btn bg-[#0e7a82] w-full mt-4">Subscribe</button>
-            </fieldset>
-          </form>
-        </nav>
       </div>
-    </footer>
+    </section>
 
-    <script src="./js/app.js"></script>
-  </body>
+    <section class="bg-white w-11/12 mx-auto">
+      <div class="w-11/12 mx-auto lg:max-w-screen-lg flex flex-col lg:flex-row justify-between items-center p-4">
+        <div class="text-lg font-semibold">Best Deal For You</div>
+        <div class="mt-2 lg:mt-0">
+          <button class="btn btn-outline bg-[#0e7a82] text-white" id="btnsortBy">
+            Sort by Price
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white w-11/12 mx-auto">
+      <div class="w-11/12 mx-auto lg:max-w-screen-lg h-auto flex flex-col lg:flex-row">
+        <!-- Card Section -->
+        <div id="leftCardContainer" class="w-full lg:w-4/5 grid grid-cols-1 lg:grid-cols-3 gap-4 p-4"></div>
+        <!-- card section end -->
+        <!-- Image Section -->
+        <div class="w-full lg:w-1/5">
+          <div id="rightSideDiv" class="grid grid-cols-2 gap-2 p-4"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- Button to trigger the CountDrownModal -->
+    <button id="CountDrownModalData" class="btn hidden"
+      onclick="document.getElementById('CountDrownModal').showModal()">
+      Open Modal
+    </button>
+
+    <!-- Modal Dialog -->
+    <dialog id="CountDrownModal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <!-- Modal content -->
+        <div class="px-5 py-10 flex flex-col justify-center items-center">
+          <img src="./design/birds.png" alt="">
+
+          <div id="modal-contentCount" class="font-bold text-black uppercase"></div>
+          <h1 class="font-bold text-black my-5">Congrats</h1>
+        </div>
+
+     
+       
+      </div>
+    </dialog>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <button id="showModalData" class="btn hidden" onclick="customModal.showModal()">
+      open modal
+    </button>
+    <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div id="modal-content"></div>
+
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+  </main>
+  <footer class="footer bg-[#121212] text-base-content p-10 text-white">
+    <div class="flex flex-col lg:flex-row justify-between items-start">
+      <aside class="flex flex-col mb-6 lg:mb-0">
+        <div class="flex justify-center gap-2">
+          <div><img src="design/logo.webp" alt="Logo" /></div>
+          <div class="font-bold">Paddey</div>
+        </div>
+
+        <p>
+          Location: av. Washington 165, NY CA 54003 <br />
+          Phone: +31 85 964 47 25 <br />
+          Email: info@yourdomain.com <br />
+          Openings hours: 9.00 AM - 5.00 PM <br />
+          Providing reliable tech since 1992
+        </p>
+      </aside>
+
+      <nav class="mb-6 lg:mb-0 flex-col">
+        <h6 class="footer-title text-white">Useful Links</h6>
+        <a class="link link-hover">Home</a>
+        <a class="link link-hover">About</a>
+        <a class="link link-hover">Animals</a>
+        <a class="link link-hover">Foundation</a>
+        <a class="link link-hover">Contact</a>
+      </nav>
+
+      <nav>
+        <form class="text-white text-right">
+          <h6 class="footer-title">Newsletter</h6>
+          <fieldset class="form-control w-full max-w-xs">
+            <div class="join">
+              <input type="text" placeholder="Enter Your Email" class="input input-bordered join-item w-full" />
+            </div>
+            <button class="btn bg-[#0e7a82] w-full mt-4">Subscribe</button>
+          </fieldset>
+        </form>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="./js/app.js"></script>
+</body>
+
 </html>
