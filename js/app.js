@@ -178,21 +178,34 @@ const loadCategories = () => {
 
 // Display categories
 const displayCategories = (categories) => {
+  console.log("shrek");
+  document.getElementById("spinner").style.display = "none"; // Hide spinner when categories are displayed
   const categoriesContainer = document.getElementById("categories");
 
-  // add Data in html
+  // Add data in HTML
   categories.forEach((item) => {
-    // create a button
+    // Create a button
     const buttonContainer = document.createElement("div");
     buttonContainer.innerHTML = `
-    <button id="btn-${item.id}" onclick="loadCategoriesVideos('${item.category}')" class="btn category-btn">
-    ${item.category}
+    <button id="btn-${item.id}" class="btn category-btn">
+      ${item.category}
     </button>
     `;
 
-    // button.classList = "btn";
+    // Attach click event to button
+    buttonContainer.querySelector("button").addEventListener("click", () => {
+      // Show spinner when button is clicked
+      document.getElementById("spinner").style.display = "block";
 
-    // button.innerText = item.category;
+      // Simulate a 2-second loading time before executing loadCategoriesVideos
+      setTimeout(() => {
+        loadCategoriesVideos(item.category);
+
+        // Hide the spinner after loading
+        document.getElementById("spinner").style.display = "none";
+      }, 2000); // 2 seconds
+    });
+
     categoriesContainer.append(buttonContainer);
   });
 };
