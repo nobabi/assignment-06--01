@@ -132,8 +132,8 @@
           </div>
         </div>
 
-        <div class="w-11/12 mx-auto lg:max-w-screen-lg">
-          <div
+        <nav id="categories" class="flex justify-center gap-5 py-3"></nav>
+          <!-- <div
             class="flex flex-wrap justify-center items-center mx-auto space-x-4 space-y-2"
           >
             <div>
@@ -181,16 +181,17 @@
                 Birds
               </button>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
+
       <section class="bg-white w-11/12 mx-auto">
         <div
           class="w-11/12 mx-auto lg:max-w-screen-lg flex flex-col lg:flex-row justify-between items-center p-4"
         >
           <div class="text-lg font-semibold">Best Deal For You</div>
           <div class="mt-2 lg:mt-0">
-            <button class="btn btn-outline bg-[#0e7a82] text-white">
+            <button class="btn btn-outline bg-[#0e7a82] text-white" id="btnsortBy">
               Sort by Price
             </button>
           </div>
@@ -202,67 +203,58 @@
         >
           <!-- Card Section -->
           <div
+            id="leftCardContainer"
             class="w-full lg:w-4/5 grid grid-cols-1 lg:grid-cols-3 gap-4 p-4"
-          >
-            <div class="card bg-base-100 shadow-xl">
-              <figure>
-                <img src="#" alt="Shoes" />
-              </figure>
-              <div class="card-body">
-                <h2 class="card-title">
-                  Shoes!
-                  <div class="badge badge-secondary">NEW</div>
-                </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                  <div class="badge badge-outline">Fashion</div>
-                  <div class="badge badge-outline">Products</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card bg-base-100 shadow-xl">
-              <figure>
-                <img src="#" alt="Shoes" />
-              </figure>
-              <div class="card-body">
-                <h2 class="card-title">
-                  Shoes!
-                  <div class="badge badge-secondary">NEW</div>
-                </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                  <div class="badge badge-outline">Fashion</div>
-                  <div class="badge badge-outline">Products</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card bg-base-100 shadow-xl">
-              <figure>
-                <img src="#" alt="Shoes" />
-              </figure>
-              <div class="card-body">
-                <h2 class="card-title">
-                  Shoes!
-                  <div class="badge badge-secondary">NEW</div>
-                </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                  <div class="badge badge-outline">Fashion</div>
-                  <div class="badge badge-outline">Products</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+          ></div>
+          <!-- card section end -->
           <!-- Image Section -->
-          <div class="w-full lg:w-1/5 grid grid-cols-2 gap-2 p-4">
-            <img class="w-full h-auto" src="design/birds.png" alt="" />
-            <img class="w-full h-auto" src="design/birds.png" alt="" />
+          <div class="w-full lg:w-1/5">
+            <div id="rightSideDiv" class="grid grid-cols-2 gap-2 p-4"></div>
           </div>
         </div>
       </section>
+
+      <!-- Open the modal using ID.showModal() method -->
+      <button
+        id="CountDrownModalData"
+        class="btn hidden"
+        onclick="CountDrownModal.showModal()"
+      >
+        open modal
+      </button>
+      <dialog id="CountDrownModal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <div id="modal-contentCount"></div>
+
+          <div class="modal-action">
+            <form method="dialog" class="text-center">
+              <h1>hello</h1>
+              <h1>Congrates</h1>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- Open the modal using ID.showModal() method -->
+      <button
+        id="showModalData"
+        class="btn hidden"
+        onclick="customModal.showModal()"
+      >
+        open modal
+      </button>
+      <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <div id="modal-content"></div>
+
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </main>
     <footer class="footer bg-[#121212] text-base-content p-10 text-white">
       <div class="flex flex-col lg:flex-row justify-between items-start">
@@ -281,7 +273,7 @@
           </p>
         </aside>
 
-        <nav class="mb-6 lg:mb-0">
+        <nav class="mb-6 lg:mb-0 flex-col">
           <h6 class="footer-title text-white">Useful Links</h6>
           <a class="link link-hover">Home</a>
           <a class="link link-hover">About</a>
@@ -291,7 +283,7 @@
         </nav>
 
         <nav>
-          <form class="text-white">
+          <form class="text-white text-right">
             <h6 class="footer-title">Newsletter</h6>
             <fieldset class="form-control w-full max-w-xs">
               <div class="join">

@@ -1,0 +1,7 @@
+.active {
+  background-color: red;
+  color: white;
+}
+.cardDiv {
+  border: 1px solid red;
+}
